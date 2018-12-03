@@ -6,6 +6,7 @@ pipeline {
       ORG               = 'sboardwell'
       APP_NAME          = 'spring-boot-http-gradle'
       CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
+      TILLER_NAMESPACE = 'kube-system'
     }
     stages {
       stage('CI Build and push snapshot') {
